@@ -5,7 +5,7 @@ int main(){
     int i,j,n,k;
     cin>>n>>k;
     vector<int> v(n);
-    vector<string> ar(n);
+    vector<string> ar;
     for(i=0;i<n;i++){
         cin>>v[i];
     }
