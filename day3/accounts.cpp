@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-    int i,j,row,col,s=0,m=INT_MIN;
+    int i,j,row,col,s=0,m=INT_MIN,c;
     cin>>row>>col;
     vector<vector<int>> v(row,vector<int>(col));
     for(i=0;i<row;i++){
@@ -16,7 +16,10 @@ int main(){
         for(j=0;j<col;j++){
             s=s+v[i][j];
         }
-        m=max(m,s);
+        if(m<s){
+            m=s;
+            c=i;
+        }
     }
-    cout<<m;
+    cout<<c+1;
 }
