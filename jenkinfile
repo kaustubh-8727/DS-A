@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Compile') {
+            steps {
+                echo 'Compiling Stage';
+            }
+        }
+        stage('Junit') {
+            steps {
+                echo 'Testing Stage';
+            }
+        }
+        stage('Quality Gate') {
+            steps {
+                echo 'Quality Gate Stage';
+            }
+        }
+        stage('production') {
+            steps {
+                echo 'production Stage';
+            }
+        }
+        
+    }
+}
